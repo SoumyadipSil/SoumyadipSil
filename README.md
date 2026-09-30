@@ -25,7 +25,7 @@
 
 
 
-### ✍️ Random Dev Quote
+### ✍️ Quote
 <div align="center">
 
 <i>Pain and suffering are always inevitable<br/>
