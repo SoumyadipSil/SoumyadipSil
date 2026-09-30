@@ -1,8 +1,8 @@
-name: Generate Snake
+name: Generate Contribution Graphs
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "15 0 * * *"
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -12,19 +12,32 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - name: Generate snake animation
-        uses: Platane/snk@v3
+      - name: Generate Bomberman graph
+        uses: abozanona/pacman-contribution-graph@main
         with:
-          github_user_name: SoumyadipSil
-          outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
+          github_user_name: ${{ github.repository_owner }}
+          games: bomberman
 
-      - name: Push to snake-output branch
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: Generate snake graphs
+        uses: Platane/snk/svg-only@v3
         with:
-          target_branch: snake-output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Organize graph files
+        shell: bash
+        run: |
+          mkdir -p output-files/graphs
+          [ -d dist ] && mv dist/*.svg output-files/graphs/ || true
+
+      - name: Publish graph files
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output-files
+          publish_branch: output
+          keep_files: true

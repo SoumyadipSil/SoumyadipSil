@@ -44,9 +44,17 @@ great sadness on earth.</i>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
-![Snake contribution graph](https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/snake-output/snake.svg)
+<picture>
+	<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/output/graphs/bomberman-contribution-graph-dark.svg">
+	<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/output/graphs/bomberman-contribution-graph.svg">
+	<img src="https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/output/graphs/bomberman-contribution-graph.svg" width="100%" alt="Bomberman contribution graph">
+</picture>
 
-![Bomberman contribution graph](https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/pacman-output/bomberman-contribution-graph.svg)
+<picture>
+	<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/output/graphs/github-snake-dark.svg">
+	<source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/output/graphs/github-snake.svg">
+	<img src="https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/output/graphs/github-snake.svg" width="100%" alt="Snake contribution graph">
+</picture>
 
 <div align="center">
 
