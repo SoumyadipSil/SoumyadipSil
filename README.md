@@ -44,7 +44,7 @@ great sadness on earth.</i>
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
-![Snake contribution graph](https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/snake-output/dist/snake.svg)
+![Snake contribution graph](https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/snake-output/snake.svg)
 
 ![Bomberman contribution graph](https://raw.githubusercontent.com/SoumyadipSil/SoumyadipSil/pacman-output/dist/bomberman-contribution-graph.svg)
 
