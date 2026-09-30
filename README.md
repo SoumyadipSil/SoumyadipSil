@@ -1,3 +1,5 @@
+![Work](./assets/work.gif)
+
 ## 👋 Hi, I'm Soumyadip
 
 - 🔭 Currently building **Voiceover**, a full-stack invoicing SaaS
@@ -25,3 +27,5 @@
 
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+
+![Nap](./assets/nap.gif)

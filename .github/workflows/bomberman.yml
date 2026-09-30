@@ -1,0 +1,30 @@
+name: Generate Bomberman Graph
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Trapfether/contribution-bomberman-svg@main
+        with:
+          github_user_name: SoumyadipSil
+          fetch_endpoint: "https://github-contributions-api.jogruber.de/v4/SoumyadipSil?y=last"
+          outputs: |
+            dist/bomberman-contribution-graph.svg
+            dist/bomberman-contribution-graph-dark.svg?color_dark=%23238636,%2326a641,%2339d353&background_dark=%230d1117
+
+      - name: Push to pacman-output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: pacman-output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
