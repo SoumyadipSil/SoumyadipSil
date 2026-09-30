@@ -2,7 +2,7 @@
 
 ## 👋 Hi, I'm Soumyadip
 
-- 🔭 Currently building **Voiceover**, a full-stack invoicing SaaS
+- 🔭 Currently building **Voiceover**, a full-stack Text to Speech SaaS
 - 🌱 I'm currently learning about **DSA**, **AI Agent** & **System Design**
 - 💬 Comfortable across Python, JavaScript/TypeScript, SQL, and the modern JS ecosystem
 - 📫 Reach me at soumyadipsil602@gmail.com
